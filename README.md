@@ -26,6 +26,10 @@ sequence.
 A feature class has been implemented that helps us in extracting relevant information such as the No of faces, distance from each face, 
 mid-point between the eyes etc. successfully. We were inspired by @betri28/FaceDetectCamera.
 
+# Touch Feature of App
+To assist blind people in locating different people, i.e., whether they are on the right side, front, or left side, a touch feature has been built. This feature can be used by touching anywhere on the preview screen. The touch mechanism detects a face/faces if the face lies anywhere above or below the place where we have touched (in a column). One can move his finger from the left side of the screen to the right side, to locate all the faces one by one.
+
+
 # Basic UI of the App
 ![ss](https://user-images.githubusercontent.com/28651490/38755155-4f845f08-3f82-11e8-8396-b5595f1b3c90.jpeg)
 
