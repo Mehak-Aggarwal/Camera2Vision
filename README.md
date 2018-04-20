@@ -6,7 +6,7 @@ This app aims at developing a non intrusive technique at imaging based automatic
 extract and deliver relevant information to a blind person in a social setting.
 
 The entire process can be divided into 3 stages
-1. Using a pi-camera as a camera source
+1. Using a camera source
 2. Face Detection
 3. Extracting relevant features such as landmarks
 4. Computing a rough estimate of the distance from the camera
