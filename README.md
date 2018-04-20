@@ -27,8 +27,10 @@ A feature class has been implemented that helps us in extracting relevant inform
 mid-point between the eyes etc. successfully. We were inspired by @betri28/FaceDetectCamera.
 
 # Touch Feature of App
-To assist blind people in locating different people, i.e., whether they are on the right side, front, or left side, a touch feature has been built. This feature can be used by touching anywhere on the preview screen. The touch mechanism detects a face/faces if the face lies anywhere above or below the place where we have touched (in a column). One can move his finger from the left side of the screen to the right side, to locate all the faces one by one.
+To assist blind people in locating different people, i.e., whether they are on the right side, front, or left side, a touch feature has been built. This feature can be used by touching anywhere on the preview screen. The touch mechanism detects a face/faces if the face lies anywhere above or below the place where we have touched (in a column). One can move his finger from the left side of the screen to the right side, to locate all the faces one by one. The top part of the screen has a small textview which displays the information.
+If face is found, it will display the person nummber and it's corresponding ID, else  it will just state no face found.
 
+Each person will have a number attached to him. This number can be used to correspond with the information one obtains in the display info button.
 
 # Basic UI of the App
 ![ss](https://user-images.githubusercontent.com/28651490/38755155-4f845f08-3f82-11e8-8396-b5595f1b3c90.jpeg)
