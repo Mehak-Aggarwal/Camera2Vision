@@ -66,22 +66,27 @@ class FaceGraphic extends GraphicOverlay.Graphic {
     FaceGraphic(GraphicOverlay overlay, Context context) {
         super(overlay);
 
-        mCurrentColorIndex = (mCurrentColorIndex + 1) % COLOR_CHOICES.length;
-        final int selectedColor = COLOR_CHOICES[mCurrentColorIndex];
+//        mCurrentColorIndex = (mCurrentColorIndex + 1) % COLOR_CHOICES.length;
+//        final int selectedColor = COLOR_CHOICES[mCurrentColorIndex];
 
         mContext = context;
 
         mFacePositionPaint = new Paint();
-        mFacePositionPaint.setColor(selectedColor);
+        mFacePositionPaint.setColor(Color.RED);
+//        mFacePositionPaint.setColor(selectedColor);
 
         mIdPaint = new Paint();
-        mIdPaint.setColor(selectedColor);
+        mIdPaint.setColor(Color.RED);
+//        mIdPaint.setColor(selectedColor);
         mIdPaint.setTextSize(ID_TEXT_SIZE);
 
         mBoxPaint = new Paint();
-        mBoxPaint.setColor(selectedColor);
+//        mBoxPaint.setColor(selectedColor);
+        mBoxPaint.setColor(Color.RED);
         mBoxPaint.setStyle(Paint.Style.STROKE);
         mBoxPaint.setStrokeWidth(BOX_STROKE_WIDTH);
+
+
     }
 
     void setId(int id) {
@@ -179,9 +184,16 @@ class FaceGraphic extends GraphicOverlay.Graphic {
             canvas.drawText("Looking",
                     x + ID_X_OFFSET * 4, y + ID_Y_OFFSET * 4, mIdPaint);
             b = true;
+            mFacePositionPaint.setColor(Color.GREEN);
+            mIdPaint.setColor(Color.GREEN);
+            mBoxPaint.setColor(Color.GREEN);
+
         } else {
             canvas.drawText("Not Looking",
                     x + ID_X_OFFSET * 4, y + ID_Y_OFFSET * 4, mIdPaint);
+            mFacePositionPaint.setColor(Color.RED);
+            mIdPaint.setColor(Color.RED);
+            mBoxPaint.setColor(Color.RED);
         }
 
 //        // Setting text View
