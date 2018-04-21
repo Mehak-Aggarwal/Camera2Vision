@@ -13,6 +13,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="61dp"
-        android:textColor="FFFFFF"
-        android:text="@string/tap_to_start" />
+        android:text="@string/tap_to_start"
+        android:textColor="@android:color/black" />
 </RelativeLayout>

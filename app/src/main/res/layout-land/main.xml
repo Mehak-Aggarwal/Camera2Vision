@@ -7,58 +7,120 @@
     android:keepScreenOn="true"
     android:orientation="vertical">
 
-  <Button
-      android:id="@+id/faces"
-      android:layout_width="103dp"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_alignStart="@+id/display"
-      android:layout_marginBottom="41dp"
-      android:text="@string/number_of_faces" />
+  <com.google.android.gms.samples.vision.face.facetracker.ui.camera.CameraSourcePreview
+      android:id="@+id/preview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
-  <Button
-      android:id="@+id/display"
-      android:layout_width="wrap_content"
-      android:layout_height="58dp"
-      android:layout_alignParentEnd="true"
-      android:layout_marginEnd="19dp"
-      android:text="@string/display_info" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/trans"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/no_faces_found"
+        android:textStyle="bold"
+        android:visibility="invisible" />
 
-  <TextView
-      android:id="@+id/info"
-      android:layout_width="102dp"
-      android:layout_height="55dp"
-      android:layout_alignTop="@+id/faces"
-      android:layout_centerHorizontal="true"
-      android:visibility="invisible"
-      android:text="TextView" />
+    <com.google.android.gms.samples.vision.face.facetracker.ui.camera.GraphicOverlay
+        android:id="@+id/faceOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+  </com.google.android.gms.samples.vision.face.facetracker.ui.camera.CameraSourcePreview>
 
   <LinearLayout
-      android:layout_width="match_parent"
+      android:layout_width="175dp"
       android:layout_height="match_parent"
-      android:orientation="vertical"
-      android:id="@+id/touchView">
+      android:layout_alignParentRight="true"
+      android:background="#000000"
+      android:orientation="horizontal"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp">
 
-    <com.google.android.gms.samples.vision.face.facetracker.ui.camera.CameraSourcePreview
-        android:id="@+id/preview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_weight="2"
+        android:orientation="vertical">
 
-      <com.google.android.gms.samples.vision.face.facetracker.ui.camera.GraphicOverlay
-          android:id="@+id/faceOverlay"
+      <Button
+          android:id="@+id/faces"
+          android:layout_width= "match_parent"
+          android:layout_height="0dp"
+          android:layout_alignParentStart="true"
+          android:layout_margin="8dp"
+          android:layout_weight="1"
+          android:background="#303030"
+          android:text="@string/number_of_faces" />
+
+      <Button
+          android:id="@+id/distance"
           android:layout_width="match_parent"
-          android:layout_height="match_parent" />
+          android:layout_height="0dp"
+          android:layout_alignParentStart="true"
+          android:layout_margin="8dp"
+          android:layout_weight="1"
+          android:background="#303030"
+          android:text="@string/distance" />
 
-    </com.google.android.gms.samples.vision.face.facetracker.ui.camera.CameraSourcePreview>
+      <Button
+          android:id="@+id/display"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignTop="@+id/faces"
+          android:layout_margin="8dp"
+          android:layout_weight="2"
+          android:background="#303030"
+          android:text="@string/display_info" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/info"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_centerHorizontal="true"
+          android:layout_margin="8dp"
+          android:layout_weight="1"
+          android:background="#424242"
+          android:gravity="center_vertical|center_horizontal"
+          android:text="@string/_0" />
+
+      <TextView
+          android:id="@+id/info2"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_centerHorizontal="true"
+          android:layout_margin="8dp"
+          android:layout_weight="1"
+          android:background="#424242"
+          android:gravity="center_vertical|center_horizontal"
+          android:text="@string/no_faces_found" />
+
+      <TextView
+          android:id="@+id/info3"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_centerHorizontal="true"
+          android:layout_margin="8dp"
+          android:layout_weight="2"
+          android:background="#424242"
+          android:gravity="center_vertical|center_horizontal"
+          android:text="@string/no_faces_found" />
+
+    </LinearLayout>
+
   </LinearLayout>
-
-  <TextView
-      android:id="@+id/textView"
-      android:layout_width="68dp"
-      android:layout_height="34dp"
-      android:layout_alignParentStart="true"
-      android:layout_alignParentTop="true"
-      android:text="Select Item" />
-
 </RelativeLayout>
-
