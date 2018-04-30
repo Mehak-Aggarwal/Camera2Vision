@@ -2,6 +2,9 @@
 
 # Documentation
 
+You can download the apk from the link below :)
+https://drive.google.com/file/d/1As5otj4VqyF7aNmcTXysO7dWNygX9Dtp/view?usp=sharing
+
 This app aims at developing a non intrusive technique at imaging based automatic analysis to
 extract and deliver relevant information to a blind person in a social setting.
 
